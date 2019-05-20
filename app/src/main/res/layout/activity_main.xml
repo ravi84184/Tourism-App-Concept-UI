@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="Search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_centerVertical="true"
+                    android:hint="Destination"
+                    android:padding="10dp"
+                    android:textColorHint="#585858"
+                    android:background="@android:color/transparent"
+                    android:layout_toStartOf="@+id/img_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/img_menu"
+                    android:tint="@android:color/darker_gray"
+                    android:src="@drawable/ic_search_black_24dp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:id="@+id/img_menu"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/img_user"
+                    android:tint="@android:color/darker_gray"
+                    android:src="@drawable/ic_menu"
+                    android:rotation="180"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_30sdp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_user"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/photo3"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:text="Explore nearby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardElevation="@dimen/_5sdp"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            app:cardPreventCornerOverlap="false"
+                            android:rotation="40">
+                            <RelativeLayout
+                                android:background="@drawable/gradient1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:rotation="-45"
+                                    android:tint="@android:color/white"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_snow_riding"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp" />
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Snow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="@dimen/_40sdp"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardElevation="@dimen/_5sdp"
+                            app:cardPreventCornerOverlap="false"
+                            android:rotation="40">
+                            <RelativeLayout
+                                android:background="@drawable/gradient2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:rotation="-45"
+                                    android:tint="@android:color/white"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_beach"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp" />
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Beach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_width="@dimen/_40sdp"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardElevation="@dimen/_5sdp"
+                            app:cardPreventCornerOverlap="false"
+                            android:rotation="40">
+                            <RelativeLayout
+                                android:background="@drawable/gradient3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:rotation="-45"
+                                    android:tint="@android:color/white"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_hills"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp" />
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Hills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="@dimen/_10sdp"
+                            app:cardCornerRadius="@dimen/_15sdp"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            app:cardElevation="@dimen/_5sdp"
+                            app:cardPreventCornerOverlap="false"
+                            android:rotation="40">
+                            <RelativeLayout
+                                android:background="@drawable/gradient4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:rotation="-45"
+                                    android:tint="@android:color/white"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_desert"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp" />
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                        <TextView
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Desert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/rl_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp">
+        <ImageView
+            android:layout_margin="@dimen/_12sdp"
+            android:tint="@android:color/white"
+            android:src="@drawable/ic_sent_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:background="@android:color/white"
+        android:elevation="@dimen/_3sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:tint="@android:color/darker_gray"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_photo_camera"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:tint="@android:color/darker_gray"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_wine"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

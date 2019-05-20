@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_profile"
+        android:title="Profile"
+        />
+    <item android:id="@+id/menu_contact"
+        android:title="Contact"
+        />
+    <item android:id="@+id/menu3"
+        android:title=""/>
+
+    <item android:id="@+id/menu_schedule"
+        android:title="Schedule"
+        />
+    <item android:id="@+id/menu_cards"
+        android:title="Cards"
+        />
+</menu>
