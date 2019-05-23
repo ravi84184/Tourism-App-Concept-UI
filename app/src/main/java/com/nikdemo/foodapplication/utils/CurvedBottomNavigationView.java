@@ -1,4 +1,4 @@
-package com.nikdemo.foodapplication;
+package com.nikdemo.foodapplication.utils;
 
 import android.content.Context;
 import android.graphics.Canvas;

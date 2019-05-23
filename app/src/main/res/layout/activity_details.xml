@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailsActivity">
+
+    <ImageView
+        android:src="@drawable/c"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_260sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/title"
+                            android:text="Bora Bora Beach"
+                            android:textSize="@dimen/_16ssp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:layout_below="@+id/title"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RatingBar
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:numStars = "5"
+                                android:rating="3.5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:isIndicator="true" />
+                            <TextView
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="3.8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="@dimen/_10ssp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:textStyle="italic"
+                                android:text="(450 Reviews)"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="@dimen/_22sdp"
+                        android:background="@drawable/circle_bg"
+                        android:elevation="@dimen/_4sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_margin="@dimen/_12sdp"
+                            android:src="@drawable/ic_directions_black_24dp"
+                            android:tint="@android:color/white" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.borjabravo.readmoretextview.ReadMoreTextView
+                        android:text="@string/largeText"
+                        android:id="@+id/text_view"
+                        app:trimCollapsedText="Show less"
+                        app:trimExpandedText="Show more"
+                        app:trimLines="3"
+                        app:trimMode="trimModeLine"
+                        app:trimLength="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

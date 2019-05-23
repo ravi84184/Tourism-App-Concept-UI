@@ -1,6 +1,7 @@
-package com.nikdemo.foodapplication;
+package com.nikdemo.foodapplication.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.support.annotation.NonNull;
@@ -12,6 +13,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.nikdemo.foodapplication.R;
+import com.nikdemo.foodapplication.activity.DetailsActivity;
 
 import java.util.ArrayList;
 
@@ -39,6 +43,9 @@ public class GalleryAdapter extends RecyclerView.Adapter {
         MyViewHolder holder = (MyViewHolder) viewHolder;
         holder.row_img.setImageDrawable(ContextCompat.getDrawable(context,list[position]));
 
+        holder.row_img.setOnClickListener(v->{
+            context.startActivity(new Intent(context, DetailsActivity.class));
+        });
     }
 
     @Override
